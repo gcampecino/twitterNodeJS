@@ -32,7 +32,7 @@ function stats (screenName) {
 					link = data[i].entities.urls[0].expanded_url;
 				var username = screenName; // todo
 				
-				// Creates the tweet using the constructor function
+				// Creates the tweet using the constructor functions
 				var tweet = new Tweet(content, created_at, link, username);
 				list[screenName].push(tweet);
 			}
