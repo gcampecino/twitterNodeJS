@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	div(class="container")
+		div(class="row")
+			div(class="col-md-4")
+				each val, index in tweets[0]['MakeSchool']
+					div(class="panel panel-primary")
+						div(class="panel-heading")=val.username
+						div(class="panel-body")
+							p= val.getContent()
+							p= val.getCreatedAt()
+							- var link = val.getLink()
+							if link != ''
+								a(href=link) details
+			div(class="col-lg-4")
+				each val, index in tweets[1]['newsycombinator']
+					div(class="panel panel-primary")
+						div(class="panel-heading")=val.username
+						div(class="panel-body")
+							p= val.getContent()
+							p= val.getCreatedAt()
+							- var link = val.getLink()
+							if link != ''
+								a(href=link) details
+			div(class="col-lg-4")
+				each val, index in tweets[2]['ycombinator']
+					div(class="panel panel-primary")
+						div(class="panel-heading")=val.username
+						div(class="panel-body")
+							p= val.getContent()
+							p= val.getCreatedAt()
+							- var link = val.getLink()
+							if link != ''
+								a(href=link) details
